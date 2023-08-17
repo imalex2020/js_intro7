@@ -1,0 +1,50 @@
+computer
+
+Binary code: ones and zeros
+-known as base-2 number system
+|||||||||||| -> oldest way of numbers
+
+
+Computer is consists of software and hardware
+Hardware: mouse, screen, printer
+Software: operating systems, paint, MCoffice, application
+It is the machine language what computer understands
+All the letters and digits, shapes and more are converted to binary code to be understood and processed by computer
+-machine
+-inpute
+-output
+-code
+-data
+-binary code
+
+bit: one or zero
+bite: 8 bits
+kilobyte: 1024 bytes
+1=one
+0=off
+
+Programing language:
+A programming language is a vocabulary and set of grammatical rules for instructing a computer
+
+interpreted:JavaScript
+compiled languages:lack ambiguity - confusion - conflict
+
+
+compilation - compile - compile -> checking if your code is grmatically correct
+execution - execute - executor -> running the code
+
+Instal node.js and check the version
+1. Downolad It
+2. MAC: open terminal and run "node -v"
+Windows open command 
+
+/*
+Multi-line comment
+*/
+
+//Single line comment
+
+console.log(); // this is a coding statement
+
+NOTE: It is recommended to put; after every coding statement;
+console.log() is used to output text and data console
