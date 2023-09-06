@@ -49,3 +49,9 @@ console.log(str1 + " " + str2); // "Hello World"
 console.log(`${str1} ${str2}`); // "Hello World"
 
 console.log(str1.concat(" ").concat(str2)); // "Hello World"
+
+
+function lastCharacter(string){
+    return string.slice(0, 2);
+}
+console.log(lastCharacter("apple"))

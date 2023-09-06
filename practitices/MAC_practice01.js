@@ -177,21 +177,21 @@ function middle(t6){
     if (t6.length % 2 === 0) return (t6.slice(((t6.length / 2) - 1), (t6.length / 2) + 1))
     else return (t6[(t6.length - 1) / 2]);
 }
-console.log(middle("cavas"));
+console.log(middle(" "));
 
 //Task - 30
 function longer(s1, s2) {
-    if (s1.length > s2.length) return s1
+    if (s1.length >= s2.length) return s1
     else return s2
 }
-console.log(longer("Techiii", "Global"));
+console.log(longer("Globay", "Global"));
 
 //Task - 31
-function longer(s1, s2) {
-    if (s1.length < s2.length) return s1
-    else return s2
+function shorter(s1, s2) {
+    if (s2.length <= s1.length) return s2
+    else return s1
 }
-console.log(longer("Tech", "Global"));
+console.log(shorter("Tech", "g123"));
 
 //Task - 32
 function concat(s1, s2){
@@ -209,4 +209,71 @@ s1[0].toUpperCase() === "I")
 return true
 else return false
 }
-console.log(startsVowel("apple"));
+
+
+function  firstLast(string){
+    if (string.length > 2) return string[0] + string.slice(string.length - 1);
+    else return string;
+}
+console.log(firstLast("1"));
+
+function hasFive(string){
+    return (string.length >= 5);
+}
+console.log(hasFive("appl"));
+
+function middle(string){
+if (string.length % 2 === 0) return string.slice(string.length / 2 - 1, string.length / 2 + 1);
+else return string[(string.length - 1) / 2]
+}
+console.log(middle("Apples"));
+
+console.log((3 == "3" || 2 + 5 === "7") && !(5 < 10 || !false) )
+console.log((!true && !false) || 5 * 2 === true * 10 )
+console.log("3" * "5" >= 15 && true == 1 && "   " == false && "" === 0) 
+console.log(!((5 ** (10 / 5) === 25 || 5 === "5" || 3 >= 5)))
+console.log(!(2 + 2 === 8 / 2 && !false && 10 % 2 === 0) || 25 % 4 == "1") 
+console.log((true && false) || (10 + 5 === "15" && "apple" !== "orange")) 
+console.log(!(10 <= 20 && 3 * 2 === "6") && (5 + 5 !== 11 || false))
+console.log(("Hello" + "World" === "HelloWorld" || 5 > 3) && (true && !false)) 
+console.log((4 >= 3 && 5 * 2 === "10") || !(7 !== "7" && "dog" === "cat"))
+console.log((20 % 6 !== 0 && "apple" === "orange") || !(2 + 2 === 4 && true)) 
+console.log((!true && !false) && ("car" === "vehicle" || 3 ** 2 <= 10)) 
+console.log((5 + 3 >= "8" && 2 ** 3 === "8") || !(false || true) )
+console.log((10 / 2 === 5 || "hello" + "world" === "helloworld") && (5 === "5" || true))
+console.log(("hello" !== "world" && "apple" + "pie" === "applepie") || (5 + 5 !== "10" && 7 % 2 === 0))
+console.log((5 * 2 === 9 || true) && !(10 - 5 !== 5 && 10 % 3 === 1))
+
+console.log("cat" == "dog");
+
+
+
+  !(2 + 2 === 8 / 2 && !false && 10 % 2 === 0) || 25 % 4 == "1"
+
+  let num = Math.floor(Math.random() * 10) + 1;
+console.log(num ** 3);
+let num1 = Math.floor(Math.random() * 10) +1;
+let num2 = Math.floor(Math.random() * 10) +1;
+let num3 = Math.floor(Math.random() * 10) +1;
+console.log((num1 + num2 + num3) / 3);
+
+function shorter(str1, str2){
+    if (str2.length <= str1.length) return str2;
+    else return str1; 
+}
+console.log(shorter("apple", "applr"));
+
+function startsVowel(s1){
+return (s1[0].toUpperCase() === "A" ||
+s1[0].toUpperCase() === "O" ||
+s1[0].toUpperCase() === "U" ||
+s1[0].toUpperCase() === "I" ||
+s1[0].toUpperCase() === "E")}
+
+console.log(startsVowel("pple"));
+
+function middle(string){
+    if(string.length % 2 === 0) return string.slice(string.length / 2 - 1, string.length / 2 + 1);
+    else return string[(string.length - 1) / 2];
+}
+console.log(middle("Appled"));
