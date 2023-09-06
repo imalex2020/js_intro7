@@ -176,4 +176,40 @@ function isEmailValid(email) {
     return true;
 }
 
+//Task - 15
+function isPasswordValid(password) {
+    if (password.length < 8 || password.length > 16) {
+      return false;
+    }
+    let hasDigit = false;
+    let hasUppercase = false;
+    let hasLowercase = false;
+    let hasSpecialChar = false;
+    
+    const specialChars = "!@#$%^&*()_+{}[]:;<>,.?~\\-";
+    for (let i = 0; i < password.length; i++) {
+      const char = password.charAt(i);
+
+      if (!hasDigit && char >= '0' && char <= '9') {
+        hasDigit = true;
+      }
+  
+      if (!hasUppercase && char >= 'A' && char <= 'Z') {
+        hasUppercase = true;
+      }
+  
+      if (!hasLowercase && char >= 'a' && char <= 'z') {
+        hasLowercase = true;
+      }
+      if (!hasSpecialChar && specialChars.includes(char)) {
+        hasSpecialChar = true;
+      }
+  
+      if (char === ' ') {
+        return false;
+      }
+    }
+  
+    return hasDigit && hasUppercase && hasLowercase && hasSpecialChar;
+  }
 
