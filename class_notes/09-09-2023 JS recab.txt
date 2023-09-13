@@ -1,0 +1,1 @@
+We can extract a callback function from building array methods

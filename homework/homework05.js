@@ -1,20 +1,27 @@
 //Task - 1
 function countPos(array){
-return(array.filter(number => number > 0)).length
+return array.filter(number => number > 0).length
 }
 
 console.log(countPos([-45, 0, 0, 34, 5, 67]));
 
+// const countPos = (arr)  => arr.filter(num =>  num > 0).length
+
+
 //Task - 2
-function countA(string){
+const countA = (string) => {
   let count = 0
     string.split('').forEach((word) =>{ 
         if (word.toUpperCase().includes('A')) count++ 
     })
     return count
-
 }
 console.log(countA("QA stands for Quality Assurance"))
+
+//Task - 2a
+const countA2 = (str) => { 
+  str.split('').filter(letter => letter.toLowerCase() === 'a').length
+}
 
 //Task - 3
 function countVowels(string){
@@ -54,6 +61,11 @@ for (let i = 1; i <= number; i++){
 return arr.reduce((sum, num) => sum * num);
 }  
 console.log(factorial(5));
+//Task - 6b
+const fac = (n) => {
+  if (n === 0 || n === 1) return 1
+  return n * fac(n - 1);
+}
 
 
 //Task - 7
@@ -83,19 +95,47 @@ if (string.includes(' ') && !(string.slice(0, string.indexOf(' ')) + string.slic
 else return count * 2
 }
 console.log(countMultippleWords(["foo", "bar", "foobar", "     foobar   " ]));
+//8b
+const countMultipleWords = (arr) =>{
+  let count = 0;
+  arr.forEach(e =>{
+    if(e.trim().includes(' ')) count++
+  });
+  return count
+}
+//8c
+const countMultipleWords2 = (arr) =>{
+return arr.reduce((count, str) =>{
+
+}, 0)
+}
 
 //Task - 9
 function count3OrLess(string){
     let w3OrLess = 0
     let arr = string.split(' ')
     for(const word of arr){
-       if (word.toString().length <= 3) w3OrLess++
+       if (word.length <= 3) w3OrLess++
 
     }
     return w3OrLess
 
 }
 console.log(count3OrLess("Hi John"))
+// 9a
+const count3OrLess = (str) =>{
+  let count = 0;
+  const arr = str.trim().split(' ');
+  str.forEach( x =>{ 
+    if(x.length > 0 && x.lenght <= 3) count++ 
+    })
+    return count
+}
+
+//9b
+const count3OrLess = (str) =>{
+  return str.trim().split(' ').filter(x => x.length > 0 && x <= 3).lenght
+}
 
 //Task - 10
 function isPrime(number) {
@@ -108,6 +148,23 @@ for(i = 0; i <= 10; i++){
 
 }
 console.log(isPrime(599))
+
+//10A
+const isPrime1 = (num) => {
+  if(num < 2) return false;
+  if(num === 2 || num === 3) return false;
+  if(num % 2 === 0 || num % 3 === 0) false;
+
+  let d = 5;
+  while (num > d){
+    if(num % d === 0) return false
+    d+=2;
+
+  }
+  return true;
+
+}
+console.log(isPrime1(5))
 
 //Task - 11
 function add(arr1, arr2){
@@ -123,6 +180,19 @@ function add(arr1, arr2){
 }  return AddArr
 }
 console.log(add([-5, 6, -3, 11], [5, -6, 3, -11]))
+//11a
+const add = (arr1, arr2) =>{
+  if(arr2.length > arr1.length) [arr1 , arr2] = [arr2, arr1]
+  for(let i = 0; i < arr2.length; i++){
+    arr[i] += arr2[i]
+  }
+  return arr1
+}
+//11b
+const add = (arr1, arr2) =>{
+  if(arr2.length > arr1.length) [arr1 , arr2] = [arr2, arr1]
+  return arr1.map((value, index) => value + (arr[i] || 0))
+}
 
 //Task - 12
 function removeExtraSpaces(string){
@@ -145,6 +215,7 @@ function findClosestTo10(arr) {
     }
     return closest;
   }
+  
 //Task - 14
 function isEmailValid(email) {
     // Split the email into parts
@@ -210,6 +281,6 @@ function isPasswordValid(password) {
       }
     }
   
-    return hasDigit && hasUppercase && hasLowercase && hasSpecialChar;
+    return hasDigit && hasUppercase && hasLowercase && hasSpecialChar; 
   }
 

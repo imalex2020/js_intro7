@@ -52,10 +52,10 @@ else {
     console.log(`is in the 4th quater is in the second half`)
 }
 
-let num1 = 34
+let num = 34
 if(num1 <= 50) {
     console.log("1st half")
-    if(num1 <= 25) {
+    if(num <= 25) {
         console.log("1st quarter");
     }
     else{
@@ -102,6 +102,14 @@ else if (l2.charCodeAt(0) >= 97 && l2.charCodeAt(0) <=122) {
 
 //Task - 6
 
+let word = "hello"
 
+for (letter of word){
+    console.log(letter)
+}
+
+
+const arr = ["apple", 'Mango']
+console.log(arr[0].length)
 
 

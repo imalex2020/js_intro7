@@ -129,20 +129,17 @@ console.log(firstDuplicate([3, 7, 10, 0, 3, 10]))
 //Task - 16
 
 function getDuplicates(array) {
-    const container = [];
-    const allDuplicates = [];
-    for (let i = 0; i < array.length; i++) {
-      let number2 = array[i];
-      if (!allDuplicates.includes(number2)) {
-        allDuplicates.push(number2);
-      } else if (!container.includes(number2)) {
-        container.push(number2);
-      }
-    }
-    return container;
-  }
+  let container = [];
+  let allDuplicates = [];
+  for(let obj of array){
+    if(container.includes(obj) && !allDuplicates.includes(obj)) allDuplicates.push(obj)
+    else container.push(obj)
 
-  console.log(getDuplicates([ 0, -4, -7, 0, 5, 10, 45, -7, 0 ]));
+  }
+  return container;
+}
+console.log(getDuplicates([5,5,9,15,-7,-7,-7]));
+
 
 //Task - 17
 function reverseStringWords(str){
