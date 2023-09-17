@@ -83,5 +83,6 @@ const categorizeCharacters = (str) =>{
     })
     return [letters.join(""),numbers.join(""), specialCharacters.join("")]
 }
+
 console.log(categorizeCharacters("12ab$%3c%"))
 
