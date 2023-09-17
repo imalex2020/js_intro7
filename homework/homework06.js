@@ -80,7 +80,7 @@ const removeDuplicates = (arr) => {
 
     } return noDuplicats
 }
-console.log(removeDuplicates(["1", "2", "3", "2", "3"]))
+console.log(removeDuplicates((["1", "2", "3", "2", "3"])))
 
 //Task - 9a
 const removeDuplicates2 = (arr) => {
@@ -163,3 +163,5 @@ function mostRepeated(arr) {
 }
 console.log(mostRepeated([4, 7, 4, 4, 4, 23, 23, 23]))
 console.log(mostRepeated(["pen", "pencil", "pen", "123", "abc", "pen", "pencil"])) 
+
+
