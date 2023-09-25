@@ -67,6 +67,8 @@ const fac = (n) => {
   return n * fac(n - 1);
 }
 
+console.log(fac(5))
+
 
 //Task - 7
 function isPalindrome(string){
@@ -152,11 +154,11 @@ console.log(isPrime(599))
 //10A
 const isPrime1 = (num) => {
   if(num < 2) return false;
-  if(num === 2 || num === 3) return false;
-  if(num % 2 === 0 || num % 3 === 0) false;
+  if(num === 2 || num === 3) return true;
+  if(num % 2 === 0) false;
 
   let d = 5;
-  while (num > d){
+  while (d < num){
     if(num % d === 0) return false
     d+=2;
 

@@ -46,7 +46,7 @@ function firstLastWord(string) {
     if (string.includes(" ")) return string.slice(0, string.indexOf(" ")) + string.slice(string.lastIndexOf(" ") + 1);
     else return (string + string);
 }
-console.log(firstLastWord("Hello"));
+console.log(firstLastWord("Hello World"));
 
 //Task - 8
 function startVower(string) {

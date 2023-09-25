@@ -16,7 +16,7 @@ console.log(noDigit("123Hello"))
 
 //2a
 const noDigit2 = (str) => str.split("").filter(x => isNaN(x)).join("")
-console.log(noDigit2("123Hell55o"))
+console.log(noDigit2("123Hell55o word "))
 
 //Task - 3
 const noVowel = (str) =>{

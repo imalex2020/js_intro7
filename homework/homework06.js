@@ -55,8 +55,8 @@ console.log(no3and5([10, 11, 12, 13, 14, 15]))
 const IsPrime = (number) => {
     let p = 5
     if (number % 2 === 0 || number % 3 === 0) return false
-    if (number < 2) return false
-    if (number === 2 || number === 3)
+    else if (number < 2) return false
+    else if (number === 2 || number === 3)
 
         while (number > p) {
             if (number % p === 0) return false
@@ -65,8 +65,8 @@ const IsPrime = (number) => {
     ; return true
 }
 
-const countPrimes = (array) => (array.filter(number => IsPrime(number))).length
-console.log(countPrimes([41, 53, 19, 47, 67]))
+const countPrimes = (array) => (array.filter(number => IsPrime(number)))
+console.log(countPrimes([31, 2, 3, 47, 67]))
 
 
 
@@ -163,5 +163,23 @@ function mostRepeated(arr) {
 }
 console.log(mostRepeated([4, 7, 4, 4, 4, 23, 23, 23]))
 console.log(mostRepeated(["pen", "pencil", "pen", "123", "abc", "pen", "pencil"])) 
+
+const mostRepeated = (arr) =>{
+    let count = {}
+    let largestCount = 0;
+    let mostRepeated;
+    for(el of arr){
+        if(count[el]){
+            count[el]++
+        } else{
+            counts[el] = 1
+        }
+        if(counts[el] > largestCount){
+            largestCount = counts[el]
+            mostRepeated = el;
+        }
+    }
+    return mostRepeated
+}
 
 

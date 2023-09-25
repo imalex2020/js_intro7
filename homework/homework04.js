@@ -125,7 +125,11 @@ function firstDuplicate(array){
 }
 
 console.log(firstDuplicate([3, 7, 10, 0, 3, 10]))
-
+console.log(firstDuplicate([ 5, 7, 7, 0, 5, 10 ])) 
+console.log(firstDuplicate([ 5, '5', 3, 7, 4 ]) )
+console.log(firstDuplicate([ 123, 'abc', '123', 3, 'abc' ]))
+console.log(firstDuplicate([ 1, 2, 3]))
+console.log(firstDuplicate([ 'foo', 'abc', '123', 'bar' ]))
 //Task - 16
 
 function getDuplicates(array) {
