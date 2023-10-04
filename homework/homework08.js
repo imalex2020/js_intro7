@@ -50,4 +50,4 @@ console.log(getCommons2(  ["Javascript","Python", "C#", "C#"], ["Python", "C#", 
 
 //Task - 9 
 const noXInVariables = (arr) => arr.join(" ").split("").filter(x => x !=="x" && x!== "X").join('').split(' ').filter(x => x.length > 0)
-console.log(noXInVariables(["xyXyxy", "Xx", "ABC"]))
+console.log(noXInVariables(["", 123, "ABC"]))

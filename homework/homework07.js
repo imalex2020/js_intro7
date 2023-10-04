@@ -63,7 +63,7 @@ const sumOfDigit = (str) =>{
 console.log(sumOfDigit("jfjf558jhj"))
 
 //6a
-const sumOfDigit2 = (str) => str.split('').filter(x => !isNaN(x)).reduce((sum, num) => parseInt(sum) + parseInt(num))
+const sumOfDigit2 = (str) => str.split('').filter(x => !isNaN(x)).reduce((sum, num) => Number(sum) + Number(num),)
 console.log(sumOfDigit2("jfjf558jhj"))
 
 //Task - 7

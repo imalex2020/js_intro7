@@ -239,7 +239,7 @@ console.log(removeDuplicates([10, 20, 35, 20, 35, 60, 70, 60]))
 
 
 //Task - 33 noDigit()???
-const noDigit = str => str.split("").filter(x => isNaN(x)).join("")
+const noDigit = str => str.split("").filter(x => isNaN(x) || x === " ").join("")
 console.log(noDigit("123Hello World149"))
 
 //Task -34 noVowel()
@@ -247,7 +247,7 @@ const noVowel = (str) => str.split("").filter(x => !"AOUEIaouei".includes(x)).jo
 console.log(noVowel("TechGlobal"))
 
 //Task - 35 sumOfDigits()
-const sumOfDigits = str => str.split("").filter(x => !isNaN(x)).reduce((sum, num) => parseInt(sum) + parseInt(num))
+const sumOfDigits = str => str.split("").filter(x => !isNaN(x)).reduce((sum, num) => Number(sum) + Number(num))
 console.log(sumOfDigits("jfjf558jhj"))
 
 //Task - 36 arrFactorial()
