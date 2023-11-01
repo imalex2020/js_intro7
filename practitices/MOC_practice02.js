@@ -8,28 +8,28 @@ const firstlastWord = (str) => str.length === 0 ? '' : str.split(" ")[0] + str.s
 console.log(firstlastWord("   "))
 
 //Task - 3 Has Vowel
-const hasVowel = (str) => str.split("").some(x => "AOUEIaouei".includes(x) ? true : false)
-console.log(hasVowel("1234"))
+const hasVowel = (str) => str.split("").some(x => "AOUEIaouei".includes(x))
+console.log(hasVowel("1A234"))
 
 //Task - 4 Start Vowel
 const startVowel = (str) => "AOEUIaoeui".includes(str[0])
-console.log(startVowel("Hello"))
+console.log(startVowel("AHello"))
 
 //Task - 5 Average of Edges
 const averageOfEdges = (num1, num2, num3) => (Math.max(num1, num2, num3) + Math.min(num1, num2, num3)) / 2
 console.log(averageOfEdges(10, 13, 20))
-
+q
 //Task - 6 Swap First and Last Characters
 const replaceFirstLast = (str) => {
     str = str.trim()
     if (str.length < 2) return ''
     return str[str.length - 1] + str.slice(1, str.length - 1) + str[0]
 }
-console.log(replaceFirstLast("   T   "))
+console.log(replaceFirstLast("Tech Global"))
 
 //Task - 7 Swap First and Last Four Characters-----------------------------
 const swap4 = (str) => str.length < 8 ? " " : str.slice(4, str.length) + str.slice(0, 4)
-console.log(swap4("Hello"))
+console.log(swap4("JavaScript"))
 
 //Task - 8 ???Swap First and Last Words -----------------------
 const swapFirstLastWord = (str) => {
@@ -192,11 +192,11 @@ const add = (arr1, arr2) => {
     let maxArr = Math.max(arr1.length, arr2.length)
     const newArr = [];
     for (i = 0; i < maxArr; i++) {
-        newArr.push(arr1[i] + (arr2[i] || 0))
+        newArr.push((arr1[i] || 0) + (arr2[i] || 0))
     } return newArr
 }
 
-console.log(add([3, 0, 0, 7, 5, 10], [6, 3, 2]))
+console.log(add([5,6,9,7,1,], [3, 0, 0, 7, 5, 10]))
 
 //Task -29 noA()
 const noA = arr => {
@@ -252,5 +252,14 @@ console.log(sumOfDigits("jfjf558jhj"))
 
 //Task - 36 arrFactorial()
 const factorial = num => num < 1 ? 1 : num * factorial(num - 1)
-const arrFactorial = arr => arr.map(factorial)
+const arrFactorial = arr => arr.map(x => factorial(x))
 console.log(arrFactorial([5, 0, 6]))
+
+
+
+
+const firstLastWord = (str) => str.slice(str[0], str.indexOf(" ")) + str.slice(str.lastIndexOf(" ") + 1, str.length);
+console.log(firstLastWord("I like JavaScript"))
+
+
+
