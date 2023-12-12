@@ -5,7 +5,7 @@ console.log(doubleOrTripleWord(" "))
 
 //Task - 2 First and Last Word only
 const firstlastWord = (str) => str.length === 0 ? '' : str.split(" ")[0] + str.split(" ")[str.split(" ").length - 1]
-console.log(firstlastWord("   "))
+console.log(firstlastWord("Hello"))
 
 //Task - 3 Has Vowel
 const hasVowel = (str) => str.split("").some(x => "AOUEIaouei".includes(x))
